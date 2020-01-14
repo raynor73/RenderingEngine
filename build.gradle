@@ -1,16 +1,18 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.61'
 }
+apply plugin: 'maven'
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'com.github.raynor73'
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'com.github.raynor73:Engine3DJvm:0.1'
 }
 
 compileKotlin {
